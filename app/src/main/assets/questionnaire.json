@@ -1,0 +1,321 @@
+{
+  "resourceType": "Questionnaire",
+  "language": "nb-NO",
+  "status": "draft",
+  "publisher": "NHN",
+  "meta": {
+    "profile": [
+      "http://ehelse.no/fhir/StructureDefinition/sdf-Questionnaire"
+    ],
+    "tag": [
+      {
+        "system": "urn:ietf:bcp:47",
+        "code": "nb-NO",
+        "display": "Bokmål"
+      }
+    ],
+    "security": [
+      {
+        "code": "3",
+        "display": "Helsehjelp (Full)",
+        "system": "urn:oid:2.16.578.1.12.4.1.1.7618"
+      }
+    ]
+  },
+  "contact": [
+    {
+      "name": "http://www.nhn.no"
+    }
+  ],
+  "subjectType": [
+    "Patient"
+  ],
+  "extension": [
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-sidebar",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-sidebar",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefinition/sdf-information-message",
+      "valueCoding": {
+        "system": "http://helsenorge.no/fhir/ValueSet/sdf-information-message",
+        "code": "1"
+      }
+    },
+    {
+      "url": "http://helsenorge.no/fhir/StructureDefintion/sdf-itemControl-visibility",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-help",
+            "display": "Hide help texts"
+          },
+          {
+            "system": "http://helsenorge.no/fhir/CodeSystem/AttachmentRenderOptions",
+            "code": "hide-sublabel",
+            "display": "Hide sublabel texts"
+          }
+        ]
+      }
+    }
+  ],
+  "id": "e68c1bda-3d05-4877-8bd3-65d186586c04",
+  "item": [
+    {
+      "linkId": "a357e3d4-4830-41c7-cb6b-d655b5c38e51",
+      "type": "string",
+      "text": "First Name",
+      "required": true
+    },
+    {
+      "linkId": "ff852460-564f-40cf-a080-47427b78d851",
+      "type": "string",
+      "text": "Middle Name",
+      "required": true
+    },
+    {
+      "linkId": "5ce057b8-30c7-46da-b2bb-df1b0c50ed3d",
+      "type": "string",
+      "text": "Last Name",
+      "required": true
+    },
+    {
+      "linkId": "994ae499-f54f-4215-ffa1-1c2864026bf5",
+      "type": "integer",
+      "text": "Age",
+      "required": false
+    },
+    {
+      "linkId": "ef790c3b-5dfa-40ed-ae02-dc09df4840d5",
+      "type": "choice",
+      "text": "Gender",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "8a799ec3-db85-4033-8d90-13a001df04a1",
+            "code": "male",
+            "system": "urn:uuid:f01459d8-6495-431b-af27-d3de37de5a9c",
+            "display": "Male"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "6d4f70e2-6848-4e13-8aa6-9afb48d1e75e",
+            "code": "female",
+            "system": "urn:uuid:f01459d8-6495-431b-af27-d3de37de5a9c",
+            "display": "Female"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "ad9e4870-ee98-4bbc-8e2e-ba5d5236882a",
+            "code": "prefer-not-to-say",
+            "system": "urn:uuid:f01459d8-6495-431b-af27-d3de37de5a9c",
+            "display": "Prefer not to say"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "62e3f95a-64d8-4882-c185-fb16c2226b93",
+            "code": "other",
+            "system": "urn:uuid:f01459d8-6495-431b-af27-d3de37de5a9c",
+            "display": "Other"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "51c1f983-1248-45f5-9d2e-9d7ee9d34d57",
+      "type": "date",
+      "text": "Date of birth",
+      "required": false
+    },
+    {
+      "linkId": "b6443f82-a84d-45f6-8ad6-46cea50dbfd3",
+      "type": "choice",
+      "text": "Types of vaccination",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "ad3ade2a-d849-466a-8f24-ab1011c276b3",
+            "code": "oxford-astrazeneca",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Oxford-AstraZeneca"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "bd144821-a6b9-47d2-f40f-a65b3f509299",
+            "code": "sputnik-v-",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Sputnik V "
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "5bcce418-59b4-4d85-9755-05a308eadcfb",
+            "code": "johnson-and-johnson",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Johnson and Johnson"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "8efddc23-1b23-4011-e584-ae5d13a57306",
+            "code": "pfizer",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Pfizer"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "e6cc973f-5435-4058-8afd-d1e8344cd6fd",
+            "code": "sinopharm",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Sinopharm"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "40c166f8-2d73-4a0a-d2df-4012932eb479",
+            "code": "moderna-",
+            "system": "urn:uuid:9903e46d-8b7e-4ba7-8c89-6fd12306621c",
+            "display": "Moderna "
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "7bfb8e9b-042d-4016-b4f9-91714152a1db",
+      "type": "choice",
+      "text": "Did you face any adverse effect\n",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "bf29e8b6-9f32-43df-8c63-cb2bd1af3d77",
+            "code": "yes",
+            "system": "urn:uuid:92ec687a-acf5-4bb1-b8a7-2f1630192de9",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "09e5438d-79ee-4d92-86a4-2d95982e9d35",
+            "code": "no",
+            "system": "urn:uuid:92ec687a-acf5-4bb1-b8a7-2f1630192de9",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "492679c3-a15c-4bef-8b1e-a5a2d00a6848",
+      "type": "choice",
+      "text": "If yes, did you refer to a hospital",
+      "required": false,
+      "answerOption": [
+        {
+          "valueCoding": {
+            "id": "29479aa7-ab42-46d7-cc86-afb7b7125789",
+            "code": "yes",
+            "system": "urn:uuid:afbed5a1-48b2-43cd-8c72-eac746250b9f",
+            "display": "Yes"
+          }
+        },
+        {
+          "valueCoding": {
+            "id": "f899f5fb-2837-4ef9-880e-be0a61fe4537",
+            "code": "no",
+            "system": "urn:uuid:afbed5a1-48b2-43cd-8c72-eac746250b9f",
+            "display": "No"
+          }
+        }
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/ValueSet/questionnaire-item-control",
+                "code": "radio-button"
+              }
+            ]
+          }
+        }
+      ],
+      "enableWhen": [
+        {
+          "question": "7bfb8e9b-042d-4016-b4f9-91714152a1db",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:92ec687a-acf5-4bb1-b8a7-2f1630192de9",
+            "code": "yes"
+          }
+        }
+      ]
+    },
+    {
+      "linkId": "451e1c1c-b7df-4a29-8d5d-abd25135fd63",
+      "type": "display",
+      "text": "Kindly visit a nearby hospital",
+      "required": false,
+      "enableWhen": [
+        {
+          "question": "492679c3-a15c-4bef-8b1e-a5a2d00a6848",
+          "operator": "=",
+          "answerCoding": {
+            "system": "urn:uuid:afbed5a1-48b2-43cd-8c72-eac746250b9f",
+            "code": "no"
+          }
+        }
+      ]
+    }
+  ]
+}
